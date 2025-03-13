@@ -6,15 +6,30 @@
     <title>Faceaiydi</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/favicon.ico" type="image/png">
+    <style>
+        body {
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+        #webcam-container, #label-container {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div>Teachable Machine Image Model</div>
-<button type="button" onclick="init()">Start</button>
-<div id="webcam-container"></div>
-<div id="label-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-<script type="text/javascript">
+    <button type="button" onclick="init()">Start</button>
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
@@ -66,7 +81,6 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }
-</script>
-
+    </script>
 </body>
 </html>
